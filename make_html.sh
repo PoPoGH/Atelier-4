@@ -1,6 +1,7 @@
 #!/bin/sh
 
-JARFILE="${1:-target/biblio.jar}"
+# Use the correct name of the JAR file as built by Maven
+JARFILE="${1:-target/biblio-0.1.jar}"
 
 # Check if the JAR file exists
 if [ ! -f "$JARFILE" ]; then
@@ -8,12 +9,6 @@ if [ ! -f "$JARFILE" ]; then
     exit 1
 fi
 
-# Check if the output directory exists and is writable
-if [ ! -w wwwroot ]; then
-    echo "Error: The wwwroot directory does not exist or is not writable."
-    exit 1
-fi
-
-# Execute the Java application for each input file
+# The rest of your script
 cat data/_liste.txt data/fg67hIOrf.txt | java -cp $JARFILE epsi.biblio.App > wwwroot/fg67hIOrf.html
 cat data/_liste.txt data/rt25TYuy0.txt | java -cp $JARFILE epsi.biblio.App > wwwroot/rt25TYuy0.html
