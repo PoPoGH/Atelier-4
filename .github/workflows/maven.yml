@@ -33,3 +33,10 @@ jobs:
 
     # Optional: Uploads the full dependency graph...
     # ...
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages # La branche où le contenu sera déployé
+        folder: wwwroot # Le dossier dont le contenu sera déployé
+        token: ${{ secrets.GITHUB_TOKEN }} # GitHub crée automatiquement ce secret pour authentifier dans vos workflows
