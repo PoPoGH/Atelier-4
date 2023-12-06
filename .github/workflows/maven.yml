@@ -31,9 +31,6 @@ jobs:
     - name: Generate HTML
       run: ./make_html.sh
 
-    # Optional: Uploads the full dependency graph...
-    # ...
-
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
