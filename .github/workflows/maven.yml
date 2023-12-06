@@ -25,6 +25,9 @@ jobs:
     - name: Build with Maven without running tests
       run: mvn -B package -DskipTests --file pom.xml
 
+    - name: Set execute permission for make_html.sh
+      run: chmod +x make_html.sh
+
     - name: Generate HTML
       run: ./make_html.sh
 
