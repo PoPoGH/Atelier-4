@@ -1,6 +1,6 @@
 #!/bin/sh
 
-JARFILE="${1:-biblio.jar}"
+JARFILE="${1:-target/biblio.jar}"
 
 # Check if the JAR file exists
 if [ ! -f "$JARFILE" ]; then
